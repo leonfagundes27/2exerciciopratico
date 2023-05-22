@@ -1,0 +1,31 @@
+def verificarprimo(n):
+    if n <= 1:
+        return False
+    c = 0
+    for i in range(1, n+1):
+        if (n % i == 0):
+            c += 1
+    if (c != 2):
+        return False
+    else:
+        return True
+def qtdprimos(n):
+    i, x = 1, 0
+    primos = []
+    while True:
+        i += 1
+        if verificarprimo(i):
+            x += 1
+            primos.append(i)
+        if x == n:
+            break
+    return primos
+def somaprimos():
+    s = 0
+    for i in qtdprimos(entrada2):
+        s += i
+    return s
+entrada = int(input('Verifique se um n° é ou não primo (True/False): '))
+print(f'{verificarprimo(entrada)}')
+entrada2 = int(input('Verfique os n primeiros números primos: '))
+print(f'{qtdprimos(entrada2)}\nA soma de todos esses valores é igual a {somaprimos()}')
