@@ -1,0 +1,8 @@
+ra = str(input('RA: '))
+s = 0
+p = 1
+for i in ra:
+    s +=  int(i)
+    p *= int(i)
+print(f'A soma dos digitos do RA {ra} = {s} e produto igual a {p}')
+    
