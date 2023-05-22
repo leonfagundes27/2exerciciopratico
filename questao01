@@ -1,0 +1,8 @@
+def funcao(c, p):
+    patos = 2*c - p/2
+    coelhos = p/2 - c
+    return (patos, coelhos)
+print('Entre com o n° de cabeças e pés e receba como resultado: (Total de patos, total de coelhos) ')
+C = int(input('Total de cabeças: '))
+P = int(input('Total de pés: '))
+print(f'\n{funcao(C, P)}')
